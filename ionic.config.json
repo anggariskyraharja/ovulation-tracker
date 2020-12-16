@@ -1,0 +1,8 @@
+{
+  "name": "ovulation-tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "bfadf6da"
+}
