@@ -1,46 +1,38 @@
 <ion-header [translucent]="true" >
   <ion-toolbar >
     <ion-title >
-      Sodium Deficit
+      Period Tracker
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card class="color1">
-    <ion-card-content>
   <ion-item class="color1">
-      <p>Calculate amount of required sodium replenishment for the patient with hyponatremia.</p>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-text>
+      <p>Estimates the future perioid days or the most probable ovulation days.</p>
+    </ion-text>
   </ion-item>
-</ion-card-content>
-</ion-card>
   <ion-list>
   <ion-item class="color2">
-    <ion-label>Gender:</ion-label>
-    <ion-select value="male" (ionChange)="check1($event)">
-      <ion-select-option value="male">Male</ion-select-option>
-      <ion-select-option value="female">Female</ion-select-option>
-    </ion-select>
+    <ion-label position="stacked">First day of last period:</ion-label>
+    <ion-datetime [(ngModel)]="date" placeholder="Pick date"></ion-datetime>
   </ion-item>
   <ion-item class="color2">
-    <ion-label>Age:</ion-label>
-    <ion-select value="adult" (ionChange)="check2($event)">
-      <ion-select-option value="child">Child</ion-select-option>
-      <ion-select-option value="adult">Adult</ion-select-option>
-      <ion-select-option value="elderly">Elderly</ion-select-option>
-    </ion-select>
+    <ion-label position="stacked">How long did it last?</ion-label>
+    <ion-input type="number" [(ngModel)]= "long" placeholder="in days"></ion-input>
   </ion-item>
   <ion-item class="color2">
-    <ion-label position="stacked">Normal weight:</ion-label>
-    <ion-input type="number" [(ngModel)]= "weight" placeholder="enter value in kg"></ion-input>
+    <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+    <p>Ranges from: 1 to 10 days.</p>
   </ion-item>
   <ion-item class="color2">
-    <ion-label position="stacked">Current sodium level:</ion-label>
-    <ion-input type="number" [(ngModel)]= "sodium" placeholder="in mEq/L"></ion-input>
+    <ion-label position="stacked">How long is your cycle?</ion-label>
+    <ion-input type="number" [(ngModel)]= "cycle" placeholder="in days"></ion-input>
   </ion-item>
   <ion-item class="color2">
-    <ion-label position="stacked">Desired sodium level:</ion-label>
-    <ion-input type="number" [(ngModel)]= "correction" placeholder="in mEq/L"></ion-input>
+    <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+    <p>Ranges from: 22 to 44 days. Use 28 days if unsure.</p>
   </ion-item>
   </ion-list>
   <ion-grid>
@@ -53,16 +45,13 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  
-  <ion-card class="color4" *ngIf="deficit" >
-    <ion-card-header>
-      <ion-card-title>Result</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>  
-  <ion-item class="color4">
-    <p>{{deficit}}</p>
+  <ion-item class="color4" *ngIf="nextperiod1">
+    <ion-label>Next cycle 1: period between <b>{{nextperiod3 | date}} - {{lastperiod3 | date}}</b>, ovulation between <b>{{nextovulation1 | date}} - {{lastovulation1 | date}}</b></ion-label>
   </ion-item>
-</ion-card-content>
-</ion-card>
-
+  <ion-item class="color4" *ngIf="nextperiod1">
+    <ion-label>Next cycle 2: period between <b>{{nextperiod1 | date}} - {{lastperiod1 | date}}</b>, ovulation between <b>{{nextovulation2 | date}} - {{lastovulation2 | date}}</b></ion-label>
+  </ion-item>
+  <ion-item class="color4" *ngIf="nextperiod1">
+    <ion-label>Next cycle 3: period between <b>{{nextperiod2 | date}} - {{lastperiod2 | date}}</b>, ovulation between <b>{{nextovulation3 | date}} - {{lastovulation3 | date}}</b></ion-label>
+  </ion-item>
 </ion-content>
