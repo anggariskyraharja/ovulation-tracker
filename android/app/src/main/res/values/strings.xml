@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ovulation & Period Tracker</string>
+    <string name="title_activity_main">Ovulation & Period Tracker</string>
+    <string name="package_name">com.imedicalapps.ovulationtracker</string>
+    <string name="custom_url_scheme">com.imedicalapps.ovulationtracker</string>
+</resources>
