@@ -39,21 +39,21 @@
     </ion-row>
   </ion-grid>
   <ion-item class="color4" *ngIf="ovulation">
-    <ion-label>Ovulation window: <b>{{ovulationwindow | date}} - {{intercourse2 | date}}</b></ion-label>
+    <p>Ovulation window: <b>{{ovulationwindow | date}} - {{intercourse2 | date}}</b></p>
   </ion-item>
   <ion-item class="color4" *ngIf="ovulation">
-    <ion-label>Most probable ovulation date: <b>{{ovulation | date}}</b></ion-label>
+    <p>Most probable ovulation date: <b>{{ovulation | date}}</b></p>
   </ion-item>
   <ion-item class="color4"  *ngIf="ovulation">
-    <ion-label>Intercourse window for pregnancy: <b>{{intercourse1 | date}} - {{intercourse2 | date}}</b></ion-label>
+    <p>Intercourse window for pregnancy: <b>{{intercourse1 | date}} - {{intercourse2 | date}}</b></p>
   </ion-item>
   <ion-item class="color4"  *ngIf="ovulation">
-    <ion-label>Pregnancy test: <b>{{pregnancytest | date}}</b></ion-label>
+    <p>Pregnancy test: <b>{{pregnancytest | date}}</b></p>
   </ion-item>
   <ion-item class="color4"  *ngIf="ovulation">
-    <ion-label>Next period start: <b>{{nextperiod | date}}</b></ion-label>
+    <p>Next period start: <b>{{nextperiod | date}}</b></p>
   </ion-item>
   <ion-item class="color4"  *ngIf="ovulation">
-    <ion-label>Due date if pregnant: <b>{{duedate | date}}</b></ion-label>
+    <p>Due date if pregnant: <b>{{duedate | date}}</b></p>
   </ion-item>
 </ion-content>
