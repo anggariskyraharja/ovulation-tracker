@@ -2,10 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<key>GADIsAdManagerApp</key>
+<true/>
+
+<key>GADApplicationIdentifier</key>
+<!-- replace this value with your App ID key-->
+<string>ca-app-pub-9580735978410872~1061136355</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-        <string>Ovulation & Period Tracker</string>
+        <string>Ovulation and Period Tracker</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
